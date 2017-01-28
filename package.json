@@ -1,0 +1,12 @@
+{
+  "name": "mathstudytool",
+  "version": "0.0.1",
+  "description": "A math quize generating tool to practice basic math facts",
+  "main": "main.js",
+  "repository": "",
+  "author": "Jason <jjw9128@rit.edu>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4"
+  }
+}

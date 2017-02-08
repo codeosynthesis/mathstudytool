@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+    <head>
+        <script type='text/javascript' src="js/jquery.min.js"></script>
+        <script type='text/javascript' src="js/bootstrap.min.js"></script>
+        <script type='text/javascript' src="js/angular.min.js"></script>
+        <script type='text/javascript' src="js/quiz.js"></script>
+        <script type='text/javascript' src="js/ngindex.js"></script>
+        <style>
+            body{
+                width:66%;
+                text-align:center;
+                margin-left:auto;
+                margin-right:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1>Math Test App</h1></header>
+        <div id='quizapp' ng-app="quizApp" ng-controller="quizCtl" >
+            <form  >
+                <fieldset ng-repeat="q in quiz.questions">
+                    {{$index}} :: 
+                    {{quiz.questions[$index].x}} 
+                    {{quiz.questions[$index].operator}}
+                    {{quiz.questions[$index].y}} = 
+                    {{quiz.questions[$index].answer}}
+                    <input ng-model="quiz.questions[$index].given" />
+                    <button ng-click="quiz.questions[$index].check()">
+                        Check
+                    </button>
+                    
+                    </fieldset>
+            </form>
+            
+        <div>
+        <hr/>
+        <article></article>
+        <footer></footer>
+    </body>
+<!-------
+<div id="config">
+                <label for="mnNum">Min Number</label>
+                <input id="mnNum" ng-model="mnNum" type="number" 
+                size=2 maxlength="2" value="1" min="0" max="10"/>
+                <label for="mxNum">Max Number</label>
+                <input id="mxNum" ng-model="mxNum" type="number" 
+                size=2 maxlength="2" value="1" min="0" max="10"/>
+            </div>
+            <hr/>
+            <div id="question">
+                <h3>Question <span ng-model="i">{{i}}</span></h3>
+                <label for="ans">
+                    <span ng-model="numa">{{problems[i].numa}}</span>
+                    <span ng-model="op">{{problems[i].op}}</span>
+                    <span ng-model="numb">{{problems[i].numb}}</span>=
+                </label>
+                <input id="ans" type="text" ng-model="ans" size=4 
+                value="{{numa + numb}}"/>
+                <button id="submit" type="submit">Enter!</button>
+            </div>
+            <hr/>
+            <div id="answers" ng-bind="answers">
+                <ul>
+                    <li ng-repeat="i in problems">
+                    <span ng-model="numa">{{problems[i].numa}}</span>
+                    <span ng-model="op">{{problems[i].op}}</span>
+                    <span ng-model="numb">{{problems[i].numb}}</span>=
+                    <span ng-model="numb">{{problems[i].ans}}</span>
+                    </li>
+                </ul>
+            </div>
+-->
+</html>

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A math quize generating tool to practice basic math facts",
   "main": "main.js",
-  "repository": "",
+  "repository": "https://github.com/jjw9128/mathstudytool",
   "author": "Jason <jjw9128@rit.edu>",
   "dependencies": {
     "async": "~0.2.8",
